@@ -1,3 +1,5 @@
 # GameEngine
 
+## Git strategy
+
 ## Versioning
