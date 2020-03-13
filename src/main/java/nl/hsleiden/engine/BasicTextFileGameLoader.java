@@ -5,6 +5,7 @@ import nl.hsleiden.game.Game;
 import nl.hsleiden.game.Level;
 import nl.hsleiden.game.Tile;
 
+import java.io.File;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -148,7 +149,9 @@ public class BasicTextFileGameLoader implements GameLoader {
     }
 
     private InputStream getLevelTilesData(int level) {
+        System.out.println(new File(".").getAbsolutePath());
         String filePath = levelTilesPaths.get(level);
+        System.out.println(filePath);
         return readFile(filePath);
     }
 
