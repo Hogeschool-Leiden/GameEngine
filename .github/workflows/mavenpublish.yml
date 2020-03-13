@@ -3,7 +3,9 @@
 
 name: Maven Package
 
-on: [push]
+on:
+  release:
+    types: [created]
 
 jobs:
   build:
@@ -23,4 +25,6 @@ jobs:
       run: mvn -B package --file pom.xml
 
     - name: Publish to GitHub Packages Apache Maven
-      run: mvn deploy -Dregistry=https://maven.pkg.github.com/Hogeschool-Leiden -Dtoken=${{ github.token }}
+      run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
