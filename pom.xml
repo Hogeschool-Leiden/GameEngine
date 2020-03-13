@@ -22,14 +22,6 @@
         </license>
     </licenses>
 
-    <distributionManagement>
-        <repository>
-            <id>github</id>
-            <name>GameEngine</name>
-            <url>https://maven.pkg.github.com/Hogeschool-Leiden/GameEngine</url>
-        </repository>
-    </distributionManagement>
-
     <properties>
         <jdk.version>1.8</jdk.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
