@@ -4,6 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+
     <groupId>nl.hsleiden</groupId>
     <artifactId>GameEngine</artifactId>
     <version>0.0.1-preview</version>
@@ -20,6 +21,14 @@
             <distribution>repo</distribution>
         </license>
     </licenses>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>Hogeschool-Leiden</name>
+            <url>https://maven.pkg.github.com/Hogeschool-Leiden/nl.hsleiden:GameEngine</url>
+        </repository>
+    </distributionManagement>
 
     <properties>
         <jdk.version>1.8</jdk.version>
