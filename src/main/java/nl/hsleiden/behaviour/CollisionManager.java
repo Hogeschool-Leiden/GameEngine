@@ -1,7 +1,7 @@
 package nl.hsleiden.behaviour;
 
 import javafx.geometry.Bounds;
-import nl.hsleiden.behaviour.behaviours.Collidable;
+import nl.hsleiden.behaviour.behaviours.Callable;
 import nl.hsleiden.game.Element;
 import nl.hsleiden.game.Game;
 import nl.hsleiden.game.Tile;
@@ -21,19 +21,19 @@ public class CollisionManager implements BehaviourManager {
     @Override
     public void handle(Element element) {
         for (Element object : game.getActiveLevel().getElements()) {
-            if (element != object && object instanceof Collidable) {
+            if (element != object && object instanceof Callable) {
                 Bounds bounds = object.getLayoutBounds();
                 if (element.intersects(bounds))
-                    ((Collidable) element).handleCollision((Collidable) object);
+                    ((Callable) element).handleCollision((Callable) object);
             }
         }
         Tile[][] tiles = game.getActiveLevel().getTiles();
         for (int i = 0; i < tiles.length; i++) {
             for (int j = 0; j < tiles[i].length; j++) {
-                if (tiles[i][j] instanceof Collidable) {
+                if (tiles[i][j] instanceof Callable) {
                     Bounds bounds = tiles[i][j].getLayoutBounds();
                     if (element.intersects(bounds))
-                        ((Collidable) element).handleCollision((Collidable) tiles[i][j]);
+                        ((Callable) element).handleCollision((Callable) tiles[i][j]);
                 }
             }
         }
