@@ -14,7 +14,7 @@ import java.util.Scanner;
 /**
  * Deze class zorgd voor het laden van de game
  * */
-public class BasicTextFileGameLoader implements GameLoader {
+public class TextFileGameLoader implements GameLoader {
     private HashMap<Integer, Class<? extends Tile>> tileMap;
 
     private HashMap<Integer, Class<? extends Element>> elementMap;
@@ -25,13 +25,13 @@ public class BasicTextFileGameLoader implements GameLoader {
 
     private int tileSize;
 
-    public BasicTextFileGameLoader(int tileSize) {
+    public TextFileGameLoader(int tileSize) {
         this.tileSize = tileSize;
         this.levelTilesPaths = new HashMap<>();
         this.levelElementsPaths = new HashMap<>();
     }
 
-    public BasicTextFileGameLoader() {
+    public TextFileGameLoader() {
         this.tileSize = 80;
         this.levelTilesPaths = new HashMap<>();
         this.levelElementsPaths = new HashMap<>();
