@@ -5,11 +5,11 @@ import nl.hsleiden.behaviour.Behaviour;
 /**
  * Een behavior specifiek voor het afhandelen van collisions
  * */
-public interface Callable extends Behaviour {
+public interface Collidable extends Behaviour {
     /**
      * Deze methode handeld een collision event af.
      *
      * @param other het collidable element.
      * */
-    void handleCollision(Callable other);
+    void handleCollision(Collidable other);
 }

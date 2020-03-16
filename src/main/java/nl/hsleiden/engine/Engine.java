@@ -6,7 +6,7 @@ import nl.hsleiden.behaviour.Behaviour;
 import nl.hsleiden.behaviour.BehaviourManager;
 import nl.hsleiden.behaviour.CollisionManager;
 import nl.hsleiden.behaviour.KeyBehaviourManager;
-import nl.hsleiden.behaviour.behaviours.Callable;
+import nl.hsleiden.behaviour.behaviours.Collidable;
 import nl.hsleiden.behaviour.behaviours.KeyBehaviour;
 import nl.hsleiden.game.Element;
 import nl.hsleiden.game.Game;
@@ -84,7 +84,7 @@ public class Engine {
         CollisionManager collisionManager = new CollisionManager(game);
         addBehavior(KeyBehaviour.class, keyBehaviorManager);
 
-        addBehavior(Callable.class,collisionManager);
+        addBehavior(Collidable.class,collisionManager);
 
     }
 
