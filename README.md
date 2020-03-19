@@ -2,7 +2,7 @@
 
 ## Git strategy
 
-[![Git Strategy](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwriteabout.net%2F2018%2F05%2F04%2Fgit-branching-guidance-for-devops-teams%2F&psig=AOvVaw28Om0FgmGvWWZ5bfQNy8Jn&ust=1584719712993000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCID97Y_zpugCFQAAAAAdAAAAABAu)](https://www.atlassian.com/git/tutorials/using-branches/merge-strategy)
+[![Git Strategy](https://mkaufmannblog.files.wordpress.com/2018/05/gitflow-light.png?w=840)](https://www.atlassian.com/git/tutorials/using-branches/merge-strategy)
 
 ## Versioning
 
