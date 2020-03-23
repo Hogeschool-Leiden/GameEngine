@@ -7,7 +7,7 @@
 
     <groupId>nl.hsleiden</groupId>
     <artifactId>GameEngine</artifactId>
-    <version>0.0.3-preview</version>
+    <version>0.0.3</version>
 
     <packaging>jar</packaging>
     <name>Game engine for the challenge week software engineering at university of applied science in Leiden</name>
