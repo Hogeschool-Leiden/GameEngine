@@ -1,5 +1,5 @@
-git# GameEngine
+# GameEngine
 
-## Git strategy
+## Introduction
 
-## Versioning
+## Getting started
