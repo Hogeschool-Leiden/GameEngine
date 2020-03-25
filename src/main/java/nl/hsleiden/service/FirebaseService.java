@@ -1,7 +1,7 @@
 package nl.hsleiden.service;
 
 import com.google.gson.Gson;
-import nl.hsleiden.model.HighScore;
+import nl.hsleiden.service.model.HighScore;
 
 import java.io.BufferedReader;
 import java.io.InputStream;

@@ -1,7 +1,10 @@
 package nl.hsleiden.behaviour;
 
-/**
- * Dit is een interface waardoor een class of interface herkent word als een gedrag.
- * */
+import javafx.event.Event;
+import javafx.event.EventType;
+
 public interface Behaviour {
+    <T extends Event> boolean canHandle(EventType<T> eventType);
+
+    void handle(Event event);
 }

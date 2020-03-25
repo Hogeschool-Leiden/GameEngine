@@ -1,4 +1,4 @@
-package nl.hsleiden.model;
+package nl.hsleiden.service.model;
 
 public class HighScore {
     public String data;

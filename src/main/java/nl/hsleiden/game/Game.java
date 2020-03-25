@@ -1,42 +1,15 @@
 package nl.hsleiden.game;
 
-import java.util.ArrayList;
+import javafx.scene.canvas.GraphicsContext;
 
-/**
- * Dit is de game. Hier kun je een aantal methoden aanroepen om informatie over het spel te krijgen,
- * of om levels toe te voegen aan het spel.
- * */
-public class Game {
-    private ArrayList<Level> levels;
-    private Level activeLevel;
+public abstract class Game {
+    private final Iterable<Element> elements;
 
-    /**
-     * @return het level dat momenteel actief is.
-     * */
-    public Level getActiveLevel() {
-        return activeLevel;
+    public Game(final Iterable<Element> elements) {
+        this.elements = elements;
     }
 
-    /**
-     * @return alle levels van het spel.
-     * */
-    public ArrayList<Level> getLevels() {
-        return levels;
-    }
-
-    /**
-     * Set de levels in het spel.
-     * @param levels de levels die in het spel gespeeld dienen te worden.
-     * */
-    public void setLevels(ArrayList<Level> levels) {
-        this.levels = levels;
-    }
-
-    /**
-     * Geef aan welk level actief is.
-     * @param level het level dat actief gezet moet worden.
-     * */
-    public void setActiveLevel(Level level){
-        this.activeLevel = level;
+    public void draw(final GraphicsContext context) {
+        elements.forEach(element -> element.draw(context));
     }
 }

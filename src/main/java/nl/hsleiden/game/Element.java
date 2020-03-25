@@ -1,14 +1,11 @@
 package nl.hsleiden.game;
 
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
+import javafx.scene.canvas.GraphicsContext;
+import nl.hsleiden.behaviour.Behaviour;
+import nl.hsleiden.property.Property;
 
-import java.io.InputStream;
+public abstract class Element implements Property {
+    private Iterable<Behaviour> behaviours;
 
-public abstract class Element extends ImageView {
-    public Element(String imagePath){
-        super();
-        InputStream inputStream = this.getClass().getResourceAsStream(imagePath);
-        super.setImage(new Image(inputStream));
-    }
+    public abstract void draw(final GraphicsContext context);
 }
