@@ -4,7 +4,7 @@ import javafx.event.Event;
 import javafx.event.EventType;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
-import nl.hsleiden.renderer.CanvasRenderer;
+import nl.hsleiden.renderer.GraphicsContext2DRenderer;
 import nl.hsleiden.event.emitters.EventEmitter;
 import nl.hsleiden.game.Game;
 import nl.hsleiden.renderer.Renderer;
@@ -52,7 +52,7 @@ public class EngineBuilder {
     public Engine build() {
         final GraphicsContext context = canvas.getGraphicsContext2D();
 
-        final Renderer renderer = new CanvasRenderer(context, game);
+        final Renderer renderer = new GraphicsContext2DRenderer(context, game);
 
         return new Engine(eventEmitters, renderer);
     }

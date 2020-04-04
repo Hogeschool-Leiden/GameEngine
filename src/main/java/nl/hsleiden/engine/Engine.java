@@ -17,4 +17,8 @@ public class Engine {
         eventEmitters.forEach(EventEmitter::startEmitting);
         renderer.startRendering();
     }
+
+    public void stop() {
+        // TODO: Stop emitting events and rendering
+    }
 }

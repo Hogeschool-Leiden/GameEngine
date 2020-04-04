@@ -1,7 +1,6 @@
 package nl.hsleiden.event.emitters;
 
 import javafx.scene.canvas.Canvas;
-import nl.hsleiden.event.emitters.EventEmitter;
 import nl.hsleiden.events.ClockEvent;
 
 import java.util.concurrent.Executors;
