@@ -1,4 +1,4 @@
 package nl.hsleiden.behaviour.dependency.injection;
 
-public class MockClass {
+public class MockClass implements MockInterface {
 }
