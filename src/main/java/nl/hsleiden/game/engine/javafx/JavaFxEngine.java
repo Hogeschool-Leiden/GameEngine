@@ -9,6 +9,7 @@ import nl.hsleiden.game.engine.abstractions.Configuration;
 import nl.hsleiden.game.engine.abstractions.Game;
 import nl.hsleiden.game.engine.abstractions.Graphics;
 import nl.hsleiden.game.engine.abstractions.Input;
+import nl.hsleiden.game.engine.dependency.injection.DependencyContainer;
 import nl.hsleiden.game.engine.physics.Dimension;
 
 import java.lang.reflect.InvocationTargetException;
@@ -28,6 +29,8 @@ public abstract class JavaFxEngine extends Application {
         var stage = new Stage();
         var graphics = new JavaFxGraphics(canvas);
         var input = new JavaFxInput(canvas);
+
+
         stage.setScene(new Scene(group));
         stage.setTitle(title);
 

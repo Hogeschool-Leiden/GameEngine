@@ -10,7 +10,6 @@ import nl.hsleiden.game.engine.physics.Dimension;
 import nl.hsleiden.game.engine.physics.Vector;
 import nl.hsleiden.game.engine.utilities.ARGBColor;
 
-
 public class JavaFxGraphics implements Graphics {
     private final Canvas canvas;
     private final GraphicsContext context;

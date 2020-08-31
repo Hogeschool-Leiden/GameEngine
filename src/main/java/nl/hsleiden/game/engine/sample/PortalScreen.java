@@ -14,6 +14,8 @@ public class PortalScreen extends Screen {
     private Cube cube;
     private Floor floor;
 
+    private boolean jumped;
+
     public PortalScreen(Game game) {
         super(game);
 
@@ -28,8 +30,22 @@ public class PortalScreen extends Screen {
             return;
         }
 
+        if (game.getInput().isKeyPressed(KeyCode.D)) {
+            cube.applyForce(new Vector(0.5f, 0f));
+        }
+
+        if (game.getInput().isKeyPressed(KeyCode.A)) {
+            cube.applyForce(new Vector(-0.5f, 0f));
+        }
+
+        if (game.getInput().isKeyPressed(KeyCode.W) && !jumped) {
+            cube.applyForce(new Vector(0f, -0.5f));
+            jumped = true;
+        }
+
         if (cube.collidesWith(floor)) {
             cube.velocity = Vector.zero();
+            jumped = false;
         } else {
             cube.applyForce(GRAVITY.multiply(cube.mass));
         }
